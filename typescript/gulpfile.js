@@ -1,14 +1,14 @@
-var gulp       = require( 'gulp' );
-var connect    = require( 'gulp-connect');
-var ts = require( 'gulp-typescript');
+var gulp    = require( 'gulp' );
+var connect = require( 'gulp-connect');
+var ts      = require( 'gulp-typescript');
 
-gulp.task('ts', function () {
-    return gulp.src('./**/*.ts')
-        .pipe(ts({
+gulp.task( 'ts', function () {
+    return gulp.src( './**/*.ts' )
+        .pipe( ts( {
             noImplicitAny: true,
             outFile: 'output.js'
         }))
-        .pipe(gulp.dest('./'))
+        .pipe( gulp.dest('./') )
         .pipe( connect.reload() );
 });
 
@@ -32,5 +32,4 @@ gulp.task( 'connect', function() {
 });
 
 // global tasks
-gulp.task( 'default', [ 'scripts', 'sass', 'css-vendors' ] );
 gulp.task( 'run', [ 'connect', 'watch' ] );
