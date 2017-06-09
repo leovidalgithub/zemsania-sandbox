@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myCalendar">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>jQuery Datepicker</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">	
+	<style>
+		#months {
+					width: 90%;
+					margin: auto;
+					border: solid 1px #6C6C6C;
+					border-radius: 5px;
+					background-color: #FBFBFB;
+					padding: 15px 5px;
+					text-align: center;
+		}
+		#months .calendar {
+					border: solid 1px #F15A29;
+					display: inline-block;
+					margin: 5px;
+					border-radius: 5px;
+		}
+		#leyend {
+					border: solid 3px #6C6C6C;
+					border-radius: 8px;
+					background-color: #FBFBFB;
+					width: 350px;
+					margin: 15px auto;
+					text-align: left;
+					padding: 5px 10px;
+		}
+		.leyendBox {
+					height: 20px;
+					width: 80px;
+					border-radius: 2px;
+					border: solid 1px gray;
+					display: inline-block;
+		}
+		.showHolidays a {
+				    background-color: #ff0000 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+		.showWorking a {
+				    background-color: #9acc00 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+		.showFriday a {
+				    background-color: #95b3d7 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+		.showIntensive a {
+				    background-color: #ffcc00 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+		.showSpecial a {
+				    background-color: #f79646 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+		.showNon_working a {
+				    background-color: #808080 !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+/*		.showDefault a {
+				    background-color: #DFDFDF !important;
+				    background-image :none !important;
+				    color: #ffffff !important;
+				}
+*/		
+		#workingLeyend div {
+		 			background-color: #9acc00;
+		 }
+		#fridayLeyend div {
+		 			background-color: #95b3d7;
+		 }
+		#intensiveLeyend div {
+		 			background-color: #ffcc00;
+		 }
+		#specialLeyend div {
+		 			background-color: #f79646;
+		 }
+		#holidaysLeyend div {
+		 			background-color: #ff0000;
+		 }
+		#non_workingLeyend div {
+		 			background-color: #808080;
+		 }
+	</style>
+</head>
+<body ng-controller="myController">
+
+	<button ng-click="fn()">Go!</button>
+	<button ng-click="fn2()">Go2!</button>
+
+	<div id="leyend">
+		<h3>{{calendarName}}</h3>
+		<div id="holidaysLeyend"><div class="leyendBox"></div> Días festivos <span></span></div>
+		<div id="workingLeyend"><div class="leyendBox"></div> Días de trabajo <span></span></div>
+		<div id="fridayLeyend"><div class="leyendBox"></div> Días viernes <span></span></div>
+		<div id="intensiveLeyend"><div class="leyendBox"></div> Días intensivos <span></span></div>
+		<div id="specialLeyend"><div class="leyendBox"></div> Días especiales <span></span></div>
+		<div id="non_workingLeyend"><div class="leyendBox"></div> Días no laborables <span></span></div>
+	</div>
+
+	<div id="months">
+		<div class="calendar" id="calendar-1"><p></p></div>
+		<div class="calendar" id="calendar-2"><p></p></div>
+		<div class="calendar" id="calendar-3"><p></p></div>
+		<div class="calendar" id="calendar-4"><p></p></div>
+		<div class="calendar" id="calendar-5"><p></p></div>
+		<div class="calendar" id="calendar-6"><p></p></div>
+		<div class="calendar" id="calendar-7"><p></p></div>
+		<div class="calendar" id="calendar-8"><p></p></div>
+		<div class="calendar" id="calendar-9"><p></p></div>
+		<div class="calendar" id="calendar-10"><p></p></div>
+		<div class="calendar" id="calendar-11"><p></p></div>
+		<div class="calendar" id="calendar-12"><p></p></div>
+	</div>
+	
+	<div>
+		<select style="font-size: 24px;" ng-model="dayTypes">
+			<option value="1">Festivos</option>
+			<option value="2">Vacaciones</option>
+			<option value="3">Laborables</option>
+		</select>
+	</div>
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+ 	<script src="datepicker-ca.js"></script>
+ 	<script src="datepicker-en.js"></script>
+ 	<script src="datepicker-es.js"></script>
+ 	<script src="bower_components/moment/moment.js"></script>
+ 	<script src="js.js"></script>
+</body>
+</html>

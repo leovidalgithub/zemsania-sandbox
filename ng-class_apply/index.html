@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Testing-33</title>
+</head>
+<style>
+	div { height: 100px; color: white; font-size: 32px; }
+	.color100 { background-color: #FFA500; }
+	.color200 { background-color: #3674F1; }
+	.color300 { background-color: #C72D2D; }
+</style>
+<body ng-controller="myController">
+
+<!-- <div ng-class="{'myClass':{{value.color=='color200'}}}" ng-repeat="(key, value) in var">id= {{value.id}} / name= {{value.name}}</div> -->
+<div ng-class="{'{{value.color}}':true}" ng-repeat="(key, value) in var">id= {{value.id}} / name= {{value.name}} / colorClass= {{value.color}}</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+<script>
+angular.module( 'myApp', [])
+	.controller( 'myController', [ '$scope', function( $scope ) {
+		$scope.var = [
+						{ id : 123, name : 'Leo'    , color : 'color100' },
+						{ id : 456, name : 'Lorenzo', color : 'color200' },
+						{ id : 789, name : 'Pedro'  , color : 'color300' }
+		];		
+	}]);
+</script>
+</body>
+</html>

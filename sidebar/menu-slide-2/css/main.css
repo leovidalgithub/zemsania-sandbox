@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 3s;
+}
+
+body {
+  background: #034080;
+}
+
+.container {
+  color: lightgray;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.textoExplicativo {
+  font-size: 1.5em;
+  color: white;
+}
+
+aside {
+  color: chocolate;
+}
+
+form {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.5em;
+  padding-left: 10px;
+}
+
+.sidenav {
+  z-index: 10;
+  background-color: black;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.sidenav a {
+  display: block;
+  text-decoration: none;
+  font-size: 2.2em;
+  color: gray;
+  padding: 8px 8px 8px 32px;
+  transition: .8s;
+  /*para el a:hover*/
+}
+
+.sidenav a:hover {
+  color: #0266c3;
+  padding-left: 38px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 3.5em;
+}

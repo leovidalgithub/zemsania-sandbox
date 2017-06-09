@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-loading-bar</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="bower_components/angular-loading-bar/build/loading-bar.css" rel="stylesheet">
+
+	<style>
+			#loading-bar .bar { position: absolute; top: 5px; background-color: orange; height: 10px; margin: 10px; border-radius: 8px; }
+			span { background-color: #484848; color: #506FF3; font-size: 24px; padding: 5px; border-radius: 5px; }
+	</style>
+</head>
+<body ng-controller="myController">
+	
+	<div id="loading-bar-container"></div>
+	<br><h2>Response from server = <span ng-init="myResponse=''">{{ myResponse }}</span></h2>
+	<button ng-click="fnHTTP()">$http</button>
+	<button ng-click="fnON()">ON</button>
+	<button ng-click="fnOFF()">OFF</button>
+
+	<button ng-click="start()">START</button>
+	<button ng-click="complete()">COMPLETE</button>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

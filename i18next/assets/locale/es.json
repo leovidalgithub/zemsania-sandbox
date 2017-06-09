@@ -1,0 +1,12 @@
+{
+    "login": {
+        "login": "Inicio de sesión",
+        "logout": "Salir",
+        "username": "Nombre de empleado",
+        "password": "Contraseña",
+        "errorAtLogin": "Usuario o contraseña no válidos",
+        "passwordRecovery": "Recuperar acceso",
+        "invalidEmail": "El usuario no es correcto",
+        "invalidPassword": "Se requiere de contraseña"
+    }
+}

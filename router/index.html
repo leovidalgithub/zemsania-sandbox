@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ui-router</title>
+	<style>
+		.divView {
+			background: #457EE6;
+			color: white;
+		}
+		.viewLimits { background: orange; }
+	</style>
+</head>
+<body>
+	<h1>Welcome</h1>
+	<h2>layoutTemplate is {{layoutTemplate}}</h2>
+
+<h2 class="viewLimits">ON TOP</h2>
+	<div class="divView">
+		<div ui-view></div>
+	</div>
+<h2 class="viewLimits">ON BOTTOM</h2>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-permission/dist/angular-permission.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="app.js"></script>
+	<script src="auth/module.auth.js"></script>
+	<script src="auth/module.other.js"></script>
+	<script src="auth/login/controller.login.js"></script>
+	<script src="auth/login/controller.other.js"></script>
+
+</body>
+</html>

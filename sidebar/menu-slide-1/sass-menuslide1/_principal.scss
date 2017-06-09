@@ -1,0 +1,54 @@
+*{
+    margin: 0;padding: 0;
+    transition: 2s;
+ }
+body {
+    background: #034080;
+}
+
+.container-fluid{
+    position: relative;
+    left: 0;
+    color: lightgray;
+}
+aside {
+    background-color: $color-2;
+}
+.row {
+    width: 100%;
+}
+.sidenav {
+    background-color: black;
+    width: $anchoMenu;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: $anchoMenu * -1; /* ancho del menú por - 1 = -250px */
+    a {
+        display: block;
+        text-decoration: none;
+        font-size: 2.3em;
+        color: gray;
+        padding-left: 40px;
+        transition: .8s;
+    &:not(.closebtn):hover{ /* todos menos el que tiene la clase closebtn */
+        color: #034080;
+        margin-top: 5px;
+        }
+    &.closebtn:hover{
+        margin-right: 2px;
+        color: red;
+        }
+    }
+    .closebtn {
+        text-align: right;
+        padding-right: 20px;
+        font-size: 3em;
+    }
+}
+.containerAbierto{
+    left: $anchoMenu;
+}
+.menuAbierto {
+    left: 0;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<title>Angular-validator</title>
+</head>
+<body>
+	<div class="container" ng-controller="myCtrl">
+
+	    <h1>Add New User</h1>
+		<form name="userForm" novalidate>
+			<div class="form-group" ng-class="{ 'has-error': userForm.userName.$touched && userForm.userName.$invalid }" >
+				<label class="control-label">userName</label>
+				<input type="text" class="form-control" name="userName" ng-model="user.userName" required placeholder="userName" />
+				<span ng-show="userForm.userName.$touched && userForm.userName.$invalid">The userName is required.</span>
+			</div>
+			<div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid && userForm.email.$dirty }" >
+				<label class="control-label">Email</label>
+				<input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+			</div>
+			<button ng-disabled="userForm.$invalid" class="btn btn-primary" ng-click="save()">Add User</button>
+			<button class="btn btn-link" ng-click="reset()">Reset</button>
+		</form>
+
+	</div>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+<script src="bower_components/bootstrap-validator/dist/validator.js"></script>
+</html>

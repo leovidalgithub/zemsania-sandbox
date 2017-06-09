@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="i18nextApp">
+<head>
+	<meta charset="UTF-8">
+	<title>i18next</title>
+</head>
+<body ng-controller="myController">
+
+	<p>
+		Change language to: <br>
+		<a href="#" ng-click="changeLng('en')">English</a><br>
+		<a href="#" ng-click="changeLng('es')">Español</a>
+	</p>
+	<hr>
+
+	<h2>5 + 11 = {{ 5 + 11 }}</h2>
+	<h1>{{ 1000 | currency }}</h1>
+	<h2>{{fecha | date}}</h2>
+
+	<h1>{{'login.login' | i18next}}</h1>
+	<h1>{{'login.username' | i18next}}</h1>
+	<h1>{{'login.password' | i18next}}</h1>
+	
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/i18next/i18next.js"></script>
+	<script src="bower_components/i18next-xhr-backend/i18nextXHRBackend.js"></script>
+	<script src="bower_components/ng-i18next/dist/ng-i18next.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

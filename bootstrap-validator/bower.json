@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-validator",
+  "homepage": "https://github.com/leovidalgithub/zemsania",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-validator": "^0.11.9"
+  }
+}

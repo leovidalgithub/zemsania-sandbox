@@ -1,0 +1,12 @@
+{
+    "login": {
+        "login": "Start here!",
+        "logout": "Exit",
+        "username": "Employee name",
+        "password": "Password",
+        "errorAtLogin": "User or password incorrect",
+        "passwordRecovery": "Recover access",
+        "invalidEmail": "User incorrect",
+        "invalidPassword": "Password is required"
+    }
+}

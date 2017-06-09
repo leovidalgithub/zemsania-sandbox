@@ -1,0 +1,54 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 2s;
+          transition: 2s; }
+
+body {
+  background: #034080; }
+
+.container-fluid {
+  position: relative;
+  left: 0;
+  color: lightgray; }
+
+aside {
+  background-color: #252932; }
+
+.row {
+  width: 100%; }
+
+.sidenav {
+  background-color: black;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  /* ancho del men├║ por - 1 = -250px */ }
+  .sidenav a {
+    display: block;
+    text-decoration: none;
+    font-size: 2.3em;
+    color: gray;
+    padding-left: 40px;
+    -webkit-transition: .8s;
+            transition: .8s; }
+    .sidenav a:not(.closebtn):hover {
+      /* todos menos el que tiene la clase closebtn */
+      color: #034080;
+      margin-top: 5px; }
+    .sidenav a.closebtn:hover {
+      margin-right: 2px;
+      color: red; }
+  .sidenav .closebtn {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 3em; }
+
+.containerAbierto {
+  left: 250px; }
+
+.menuAbierto {
+  left: 0; }

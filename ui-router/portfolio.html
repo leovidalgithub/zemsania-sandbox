@@ -1,0 +1,21 @@
+<h4>Portfolio Page</h4><hr/>
+<strong>This page shows multiple named views in action.</strong>
+
+<div class="row">
+	<div class="col-sm-5">
+	  <div class="panel panel-default" ui-view="view1"></div>        
+	</div>
+	<div class="col-sm-7">
+	  <div class="panel panel-default" ui-view="view2"></div>        
+	</div>
+</div>
+
+<div>
+	<div class="thirdPanel panel panel-default" ui-view="view3"></div>        
+</div>
+
+<style> .thirdPanel { padding: 30px; background: #5963E1; color: white; border-radius: 8px; border: 6px solid #4F90CC; }
+		.thirdPanel * { margin: 0; }
+</style>
+  
+

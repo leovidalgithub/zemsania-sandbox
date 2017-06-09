@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Bootstrap-validator</title>
+	<style>
+		.myContainer {width: 80%; margin: 50px auto;}
+		.fixedRow {height: 85px; position: fixed;width: inherit;background-color: rgba(172,33,43,.76);z-index: 100;}
+		.freeRow {height: 222px; width: auto;background-color: rgba(72,133,143,.9);}
+	</style>
+</head>
+<body>
+
+<div class="myContainer">
+	<div class="fixedRow">
+		<p>Such as terrible life. I´m trapped by an ugly CSS3 rule</p>
+		<button class="btn btn-md btn-danger" onclick="goToTop()">Go!</button>
+	</div>
+	<br><br><br><br><br><br><br>
+	<div class="freeRow">I am so happy because I`m a free Bootstrap row</div>
+</div>
+	
+<div class="container">
+	<form name="myForm" data-toggle="validator" role="form" onsubmit="formSubmit(myForm)">
+	  <div class="form-group">
+	    <label for="inputName" class="control-label">Name</label>
+	    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+	  </div>
+	  <div class="form-group has-feedback">
+	    <label for="inputTwitter" class="control-label">Twitter</label>
+	    <div class="input-group">
+	      <span class="input-group-addon">@</span>
+	      <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
+	    </div>
+	    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+	    <div class="help-block with-errors">Hey look, this one has feedback icons!</div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputEmail" class="control-label">Email</label>
+	    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+	    <div class="help-block with-errors"></div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword" class="control-label">Password</label>
+	    <div class="form-inline row">
+	      <div class="form-group col-sm-6">
+	        <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+	        <div class="help-block">Minimum of 6 characters</div>
+	      </div>
+	      <div class="form-group col-sm-6">
+	        <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+	        <div class="help-block with-errors"></div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="radio">
+	      <label>
+	        <input type="radio" name="underwear" required>
+	        Boxers
+	      </label>
+	    </div>
+	    <div class="radio">
+	      <label>
+	        <input type="radio" name="underwear" required>
+	        Briefs
+	      </label>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+	        Check yourself
+	      </label>
+	      <div class="help-block with-errors"></div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <button type="submit" class="btn btn-primary">Submit</button>
+	  </div>
+	</form>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam iure iusto quia, aliquid impedit est ipsa adipisci esse omnis molestiae, dolorem, itaque nesciunt perferendis architecto consequuntur earum. Harum, nesciunt!</p>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="bower_components/bootstrap-validator/dist/validator.js"></script>
+	<script>
+		function formSubmit( myForm ) {
+			console.log( myForm );
+		}
+		function goToTop() {
+			var bodyScroll = $( document.body ).scrollTop();
+			if ( bodyScroll != 0 ) {
+				$( document.body ).animate( { scrollTop: 0 }, 3000 );			
+			}
+		};
+	</script>
+</body>
+</html>

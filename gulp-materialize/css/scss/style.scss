@@ -1,0 +1,43 @@
+@import "colors";
+
+body, document {
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.myBox {
+    background : $myRed;
+    border: 5px solid #333;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 26px;
+    font-family: monospace;
+    filter: blur(1px);
+}
+
+#thisId {
+    padding: 3px;
+    background-color: $myYellow;
+    width: 95%;
+    margin: auto;
+    h1 {
+        // color: $myOrange;
+    }
+}
+.thisClass {
+    padding: 2px;
+    background-color: $myGreen;
+    width: 75%;
+    margin: auto;
+    h1 {
+        color: $myRed;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: $myBlue;
+}

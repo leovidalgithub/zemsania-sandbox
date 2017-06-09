@@ -1,0 +1,56 @@
+body, * {
+	margin: 0;
+	padding: 0;
+}
+
+#sidenav {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(12,12,12,.5);
+    overflow-y: auto;
+    transition: all 2s ease;
+}
+#sidenav a {
+    display: block;
+    text-decoration: none;
+    font-size: 2.3em;
+    color: white;
+    padding-left: 40px;
+    transition: all .5s ease;
+	}
+#sidenav a:hover {
+  	color: #257ED0;
+}
+
+#section {
+  	background-color: #D45353;
+	  height: 100%;
+    margin: 10px;
+    margin-left: 255px;
+    transition: all 1s ease;
+    text-align: right;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+}
+#section button {
+	  font-size: 32px;
+}
+
+.openSidebar {
+  	left: 0 !important;
+  	background-color: rgba(0, 0, 183, 0.52) !important;
+}
+
+  @media(max-width: 768px) {
+   	#sidenav {
+    	left: -250px;
+ 	}
+	  #section {
+      margin-left: 0;
+    }
+  }
+

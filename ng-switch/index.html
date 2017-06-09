@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Ng-Switch</title>
+</head>
+<body>
+
+	My favorite topic is:
+	<select ng-model="myVar">
+		<option value="dogs">Dogs
+		<option value="tuts">Tutorials
+		<option value="cars">Cars
+	</select>
+	<hr>
+	<div ng-switch="myVar">
+		<div ng-switch-when="dogs">
+			<h1>Dogs</h1>
+			<p>Welcome to a world of dogs.</p>
+		</div>
+		<div ng-switch-when="tuts">
+			<h1>Tutorials</h1>
+			<p>Learn from examples.</p>
+		</div>
+		<div ng-switch-when="cars">
+			<h1>Cars</h1>
+			<p>Read about cars.</p>
+		</div>
+		<div ng-switch-default>
+			<h1>Switch</h1>
+			<h2>This is the ng-switch-default mode</h2>
+		</div>
+	</div>
+	<hr>
+
+	<p>The ng-switch directive hides and shows HTML sections depending on a certain value.</p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>	
+	<script>
+		angular.module('myApp', []);
+	</script>	
+</body>
+</html>

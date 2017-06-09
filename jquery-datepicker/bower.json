@@ -1,0 +1,17 @@
+{
+  "name": "jquery-datepicker",
+  "homepage": "https://github.com/leovidalgithub/zemsania-sandbox",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.18.0"
+  }
+}

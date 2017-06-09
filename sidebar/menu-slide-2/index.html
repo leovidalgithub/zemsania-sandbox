@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Menú sliding</title>
+    <link rel="stylesheet" href="css/bootstrap-flex.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="container">
+        <br></br>
+        <button id="botonAbrir" type="button" class="btn btn-primary btn-lg">Menú</button>
+      <form role="form">
+        <div class="checkbox">
+          <label><input id="check" type="checkbox" value=""> Push content</label>
+        </div>
+      </form>
+                
+        <br>
+        <div class="row">
+       <section class="col-md-8">
+            <p class="textoExplicativo">El <code>menú</code> tiene position: fixed, top: 0 y left: 0, y lo que cambio es el Width de 0 a 250px. Overflow: hidden para que su contenido no se vea cuando tiene el width en 0. Z-index en 10 para que aparezca encima del contenido cuando éste no se desplaza.<br><br>         
+            Con el <code>contenido</code> simplemente modifico el margin-left. Y con Jquery cambio directamente las propiedades CSS sin estar agregando clases.<br><br>El <code>botón X</code> tiene position: absolute con el rigth: 25px y funciona porque su padre (el menú) ya tiene position: fixed. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.Nostrum, cum minus enim veritatis aliquam.</p>
+        </section>
+        <aside class="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        </aside>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quo veniam enim voluptatem voluptate quaerat modi voluptatum laborum doloribus iusto animi aut incidunt similique! Nostrum, cum minus enim veritatis aliquam.</p>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>    
+    <script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

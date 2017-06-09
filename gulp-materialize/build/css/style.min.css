@@ -1,0 +1,40 @@
+body, document {
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+.myBox {
+  background: #b1423b;
+  border: 5px solid #333;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-size: 26px;
+  font-family: monospace;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+#thisId {
+  padding: 3px;
+  background-color: #ddbf00;
+  width: 95%;
+  margin: auto;
+}
+
+.thisClass {
+  padding: 2px;
+  background-color: #459d11;
+  width: 75%;
+  margin: auto;
+}
+.thisClass h1 {
+  color: #b1423b;
+}
+
+h1 {
+  text-align: center;
+  color: #1063c6;
+}
