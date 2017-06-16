@@ -4,10 +4,10 @@
 </div>
 
 <div>
-    <h3>Message from child 3 = <span>{{msgFromChild3}}</span></h3>
+    <h3>The father is sending random messages to all his three childs</h3>
 </div>
 <div class="myContent">
-    <app-child1 [msgFromParent]="msgToChild1"></app-child1>
-    <app-child2 [msgFromParent]="msgToChild2"></app-child2>
-    <app-child3 (eventToParent)="eventFromChild3($event)"></app-child3>
+    <app-child1></app-child1>
+    <app-child2></app-child2>
+    <app-child3></app-child3>
 </div>

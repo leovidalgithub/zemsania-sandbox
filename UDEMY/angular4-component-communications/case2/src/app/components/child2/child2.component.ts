@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ShareDataService, IData } from './../../shared/';
 
 @Component({
   selector: 'app-child2',
@@ -6,21 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./child2.component.scss']
 })
 export class Child2Component implements OnInit {
-    myValue: number = 0;
-    myMsgFromParent: string;
+    private myValue: number = 0;
+    private myMsg: number;
 
-    @Input()
-    set msgFromParent(value:string) {
-        this.myMsgFromParent = (value && value.trim()) || 'No msg come along';
-        this.myMsgFromParent+= ` with EXTRA info`;
+    constructor(private ss:ShareDataService) { }
+
+    ngOnInit() {
+        this.ss.getLogged(2).subscribe((data:IData) => {
+            this.myMsg = data.msg;
+            this.myValue++;
+        });
     }
-    get msgFromParent() {
-        return this.myMsgFromParent;
-    }
-
-
-    constructor() { }
-
-    ngOnInit() { }
 
 }

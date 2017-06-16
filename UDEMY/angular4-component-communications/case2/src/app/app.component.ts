@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
+import { MyClass, ShareDataService, IData } from './shared';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [MyClass, ShareDataService]
 })
 export class AppComponent {
-    private cont:number = 0;
     private msgFromChild3:string;
 
-    msgToChild1:string = `To CHILD-1 from parent / ${this.cont}`;
-    msgToChild2:string = `To CHILD-2 from parent / ${this.cont}`;
+    constructor(private ss:ShareDataService) {}
 
-    eventFromChild3( msg ) {
-        this.msgFromChild3 = String(msg);
-    }
-
-    ngOnInit() { }
+    ngOnInit() {
+        setInterval(():void => {
+            let child:number = MyClass.getRandomChild();
+            let msg = MyClass.getRandomNumber();
+            this.ss.setLogged(child,{msg:msg});
+        },400);
+     }
 
  }

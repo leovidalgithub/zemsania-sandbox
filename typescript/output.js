@@ -12,6 +12,19 @@ function greeter(person) {
 }
 var user = new Student('Leonardo', 'M.', 'Rdgz Vidal');
 var ss = document.createElement('B');
-var tt = document.createTextNode("Hello " + greeter(user));
+var tt = document.createTextNode("From greeter.ts . . . - " + greeter(user));
 ss.appendChild(tt);
 document.getElementById('content').appendChild(ss);
+function sum(a, b) {
+    return a + b;
+}
+var varSum = function (a, b) {
+    return a + b;
+};
+console.log(sum(2, 5));
+console.log(varSum(1, 5));
+//************************************************
+var myAdd = function (x, y) {
+    return x + y;
+};
+console.log(myAdd(3, 3));

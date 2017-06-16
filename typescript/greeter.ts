@@ -15,8 +15,7 @@ function greeter( person: Person ) {
 }
 
 var user = new Student( 'Leonardo', 'M.', 'Rdgz Vidal' );
-
 var ss = document.createElement( 'B' );
-var tt = document.createTextNode( `Hello ${greeter(user)}` );
+var tt = document.createTextNode( `From greeter.ts . . . - ${greeter(user)}` );
 ss.appendChild( tt );
 document.getElementById( 'content' ).appendChild( ss );

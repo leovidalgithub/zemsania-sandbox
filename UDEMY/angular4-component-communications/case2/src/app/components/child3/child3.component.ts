@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ShareDataService, IData } from './../../shared/';
 
 @Component({
   selector: 'app-child3',
@@ -6,20 +7,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child3.component.scss']
 })
 export class Child3Component implements OnInit {
-    myValue: number = 0;
+    private myValue: number = 0;
+    private myMsg: number;
 
-    @Output() eventToParent: EventEmitter<number> = new EventEmitter<number>();
-
-    msgToParent() {
-        let value:number;
-        value = Math.floor((Math.random() * 100) + 1);
-        this.eventToParent.next(value);
-    }
-
-    constructor() { }
+    constructor(private ss:ShareDataService) { }
 
     ngOnInit() {
-        setInterval(():void => {this.msgToParent()},2000);
-     }
+        this.ss.getLogged(3).subscribe((data:IData) => {
+            this.myMsg = data.msg;
+            this.myValue++;
+        });
+    }
 
 }
