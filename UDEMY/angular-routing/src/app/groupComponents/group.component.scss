@@ -1,0 +1,15 @@
+.main {
+    text-align: center;
+    .row {
+        margin-top: 15px;
+    }
+    .thisBox {
+        height: 100px;
+        border: 1px solid orange;
+        cursor: pointer;
+        transition: filter 1s ease;
+        &:hover {
+            filter: blur(2.5px);
+        }
+    }
+}

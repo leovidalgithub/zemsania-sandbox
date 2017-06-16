@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    p {
+        margin: 0;
+        font-size: 3rem;
+    }
+    .smallMePlease {
+        font-size: .9rem;
+    }
+}

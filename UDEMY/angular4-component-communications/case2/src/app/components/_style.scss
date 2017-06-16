@@ -1,0 +1,19 @@
+.myBox {
+    height: 220px;
+    width: 220px;
+    border-radius: 8px;
+    background-color: #c3002f;
+    font-family: monospace;
+    margin: 15px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    div:last-child {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+}

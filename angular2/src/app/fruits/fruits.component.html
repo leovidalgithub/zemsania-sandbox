@@ -1,0 +1,25 @@
+
+<p class="myComponentClass" (click)="setPerson()">
+  This is my new Angular 2 Component!
+  {{cont}}
+</p>
+<div [class]="clase">
+    <p [hidden]="visible">
+      Visible = {{visible}}
+    </p>
+    <p [hidden]="!visible">
+      !Visible = {{visible}}
+    </p>
+</div>
+<button class="btn btn-primary" (click)="pressMe()">Toggle visible</button>
+<p *ngIf="showMe ; else noServer">This paragraph appers because of showMe variable is set on {{showMe}}</p>
+<a href="http://google.es">Go to</a>
+<a [href]="enlace">Dólar</a>
+<p>
+  ¿Cómo te llamas?  <input type="text" [(ngModel)]="quien" (input)="inputChanged($event)" />
+  {{quien}}
+</p>
+<h3 [ngStyle]="{backgroundColor: getColor()}">Server is {{serverStatus}}</h3>
+<ng-template #noServer>
+    <p>This is show by ng-templeate conditional</p>
+</ng-template>

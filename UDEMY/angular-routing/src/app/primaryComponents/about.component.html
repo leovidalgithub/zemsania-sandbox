@@ -1,0 +1,12 @@
+<div class="about">
+
+    <h2>About</h2>
+    <a [routerLink]="['/about']">About-Home</a>
+    <a [routerLink]="['/about/item', 1]">Item 1</a>
+    <a [routerLink]="['/about/item', 2]">Item 2</a>
+    <a [routerLink]="['/about/group']">Group</a>
+    <div class="aboutBox">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
